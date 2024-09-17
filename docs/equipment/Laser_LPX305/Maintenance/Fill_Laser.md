@@ -37,14 +37,19 @@ List any prerequisites needed before performing the maintenance, such as tools, 
 - Close all gas lines. All valves should be perpendicular to line.
 - Turn on laser and wait for warmup
 
-### Step 2: Flush Fluorine line
-- Open the three valves on the fluorine line: The tank valve, pre-regulator valve, and outlet
-- close the red pre-regulator valve.
-- on control panel, press `FLUSH`. Select 
+### Step 2: Flush Fluorine line 
+- Set the line pressure to about 60 psi.
+- Open all valves on the fluorine line: The tank valve, pre-regulator valve, and outlet.
+- CLOSE the red pre-regulator valve.
+- On control panel, press `FLUSH`.
 ![alt text](Assets/Fill_Laser/20240917_184937365_iOS.png)
+- Use the arrow to select the `BUFFER` line.
 ![alt text](Assets/Fill_Laser/20240917_184941482_iOS.png)
+- press `ENTER`,`EXE`.
+![alt text](Assets/Fill_Laser/20240917_184948179_iOS.png)
+- repeat this step 3 times
 
-### Step 3: Verification
+### Step 3: Fill laser
 - Steps to verify that the system is functioning correctly post-maintenance.
 - Any tests that should be performed to ensure system integrity.
 
