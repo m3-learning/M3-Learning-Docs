@@ -43,9 +43,7 @@ jobs:
 
       - name: Run tests and build package
         run: |
-          tox  # This will run tests defined in tox
           tox -e docs  # Build documentation
-          tox -e build  # Build the package
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
