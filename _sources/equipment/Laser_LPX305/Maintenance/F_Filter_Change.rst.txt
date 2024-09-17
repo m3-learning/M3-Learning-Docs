@@ -19,7 +19,7 @@ Safety Precautions
 - Do NOT use metal tools. Be careful to not scratch any parts as this can cause leaks.
 
 .. include:: ./hazards.rst
-   :literal:
+
 
 Maintenance Schedule
 --------------------
