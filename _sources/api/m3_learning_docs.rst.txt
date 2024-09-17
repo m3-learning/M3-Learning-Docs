@@ -1,0 +1,10 @@
+m3\_learning\_docs package
+==========================
+
+Module contents
+---------------
+
+.. automodule:: m3_learning_docs
+   :members:
+   :undoc-members:
+   :show-inheritance:
