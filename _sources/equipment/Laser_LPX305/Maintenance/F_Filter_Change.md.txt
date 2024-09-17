@@ -65,7 +65,7 @@ List any prerequisites needed before performing the maintenance, such as tools, 
 
 ### Step 4: Cleanup
 ![alt text](Assets/F_Filter_Change/Photos/20240917_183133912_iOS.png)
-- Turn on the laser (key and switch in back) and press f4 on the control panel. Set the `FILTER FILLING RATIO` to   `0`. Hit `ENTER`, `EXECUTE`
+- Turn on the laser (key and switch in back) and press f4 on the control panel. Set the `FILTER FILLING RATIO` to   `0`. Hit `ENTER`, `EXE`
 ![alt text](Assets/F_Filter_Change/Photos/20240917_183712711_iOS.png)
 ![alt text](Assets/F_Filter_Change/Photos/20240917_183722381_iOS.png)
 - Put the old filter back inside the white container with red lid. Record the date the filter was changed on the container and put back in bag.
