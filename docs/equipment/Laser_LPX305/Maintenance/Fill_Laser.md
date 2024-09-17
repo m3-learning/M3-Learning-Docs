@@ -50,12 +50,10 @@ List any prerequisites needed before performing the maintenance, such as tools, 
 - repeat this step 3 times
 
 ### Step 3: Fill laser
-- Steps to verify that the system is functioning correctly post-maintenance.
-- Any tests that should be performed to ensure system integrity.
+- Press `NEW FILL`,`ENTER`,`EXE` on the control panel. The pressure will go down to 0 before filling up to about 3600 mbar.
 
-### Step 4: Cleanup
-- Instructions on how to clean up the workspace after completing maintenance.
-- How to properly dispose of any used materials or waste products.
+### Step 4: Test Laser
+- Press `RUN STOP`,`ENTER`,`EXE`.
 
 ## Troubleshooting
 
