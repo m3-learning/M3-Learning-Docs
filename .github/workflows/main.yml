@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: Ubuntu  # Self-hosted runner is specified here
+    runs-on: ubuntu-latest  # Self-hosted runner is specified here
     permissions:
       contents: write
     steps:
