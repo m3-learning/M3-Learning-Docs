@@ -1,5 +1,5 @@
 Laser Site Prep Guide
-=================
+=====================
 
 .. raw:: html
 
