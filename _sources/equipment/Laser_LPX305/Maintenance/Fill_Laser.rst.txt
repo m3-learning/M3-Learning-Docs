@@ -12,9 +12,9 @@ Prerequisites
 Safety Precautions
 ------------------
 
-- Be sure to wear glasses.
+- Be sure to wear laser safety goggles.
 - Start with all valves closed on gas lines
-- 
+
 .. include:: ./hazards.rst
 
 Maintenance Schedule
