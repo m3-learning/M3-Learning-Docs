@@ -1,4 +1,4 @@
-System Maintenance Instructions for Changing the Florine Filter
+System Maintenance Instructions for Changing the Fluorine Filter
 ===============================================================
 
 Overview

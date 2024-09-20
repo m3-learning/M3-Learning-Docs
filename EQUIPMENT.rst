@@ -6,4 +6,5 @@ Equipment Documentation
    :caption: Equipment
 
    equipment/Laser_LPX305/Maintenance/F_Filter_Change
+   equipment/Laser_LPX305/Maintenance/Fill_Laser
    equipment/Laser_LPX305/Maintenance/site_prep
