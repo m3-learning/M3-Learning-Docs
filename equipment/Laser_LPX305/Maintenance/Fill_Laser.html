@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>System Maintenance Instructions for Filling Laser &#8212; M3-Learning-Docs 0.0.post1.dev1+gabc070f documentation</title>
+    <title>System Maintenance Instructions for Filling Laser &#8212; M3-Learning-Docs 0.0.post1.dev1+g231de7c documentation</title>
   
   
   
@@ -36,7 +36,7 @@
 <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../../../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../../../_static/documentation_options.js?v=c1db9053"></script>
+    <script src="../../../_static/documentation_options.js?v=1542ea38"></script>
     <script src="../../../_static/doctools.js?v=9a2dae69"></script>
     <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'equipment/Laser_LPX305/Maintenance/Fill_Laser';</script>
@@ -44,7 +44,7 @@
     <link rel="search" title="Search" href="../../../search.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 17, 2024"/>
+    <meta name="docbuild:last-update" content="Sep 20, 2024"/>
   </head>
   
   
@@ -122,8 +122,8 @@
       
     
     
-    <img src="../../../_static/Drexel_blue_Logo_square_Light.png" class="logo__image only-light" alt="M3-Learning-Docs 0.0.post1.dev1+gabc070f documentation - Home"/>
-    <script>document.write(`<img src="../../../_static/Drexel_blue_Logo_square_Dark.png" class="logo__image only-dark" alt="M3-Learning-Docs 0.0.post1.dev1+gabc070f documentation - Home"/>`);</script>
+    <img src="../../../_static/Drexel_blue_Logo_square_Light.png" class="logo__image only-light" alt="M3-Learning-Docs 0.0.post1.dev1+g231de7c documentation - Home"/>
+    <script>document.write(`<img src="../../../_static/Drexel_blue_Logo_square_Dark.png" class="logo__image only-dark" alt="M3-Learning-Docs 0.0.post1.dev1+g231de7c documentation - Home"/>`);</script>
   
   
 </a></div>
@@ -501,14 +501,29 @@ document.write(`
 </section>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading">#</a></h2>
-<p>List any prerequisites needed before performing the maintenance, such as tools, software versions, access permissions, or previous configurations.</p>
 </section>
 <section id="safety-precautions">
 <h2>Safety Precautions<a class="headerlink" href="#safety-precautions" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Be sure to wear glasses.</p></li>
 <li><p>Start with all valves closed on gas lines</p></li>
+<li></li>
 </ul>
+</section>
+<section id="hazards">
+<h2>Hazards<a class="headerlink" href="#hazards" title="Link to this heading">#</a></h2>
+<section id="radiation-exposure">
+<h3>Radiation exposure<a class="headerlink" href="#radiation-exposure" title="Link to this heading">#</a></h3>
+<p><strong>Warning</strong>: LPX305 is a Class IV laser that can produce a ~20 ns pulse of up to 1000 mJ at 248 nm and a repetition rate of 1 to 100 Hz during normal operation. Approved laser glasses are required during laser operation and any time the user is in Bossone 530 and the laser light is on. Direct exposure of the skin and eye tissue to any Class IV laser can result in severe damage. Specular and diffuse reflections are also harmful to the eye tissue. Thus, approved laser glasses must be worn at all times behind the laser curtain.</p>
+</section>
+<section id="high-voltage">
+<h3>High Voltage<a class="headerlink" href="#high-voltage" title="Link to this heading">#</a></h3>
+<p><strong>Warning</strong>: The laser operates at high voltage (24 kV). Electrical shock or electrocution could result from contact with the high voltage power supply. During normal operation it should not be able to access the high voltage lines.</p>
+</section>
+<section id="toxic-and-compressed-gases">
+<h3>Toxic and compressed gases<a class="headerlink" href="#toxic-and-compressed-gases" title="Link to this heading">#</a></h3>
+<p><strong>Warning</strong>: The gas mixture used as the lasing medium contains a mixture of Fluorine (&lt;0.1%), Krypton, Helium, and Neon. In concentrated form, exposure to Fluorine gas can be deadly. A gas leak will be accompanied by a sharp, sulfurous-like smell (i.e., like rotten eggs). Additionally, the gas mixture is in compressed form and can be a potential explosion hazard if proper safety procedure is not followed. Finally, the lasing cavity is kept over atmospheric pressure at a pressure of 3300 mbar.</p>
+</section>
 </section>
 <section id="maintenance-schedule">
 <h2>Maintenance Schedule<a class="headerlink" href="#maintenance-schedule" title="Link to this heading">#</a></h2>
@@ -520,9 +535,7 @@ document.write(`
 <section id="required-tools-and-materials">
 <h2>Required Tools and Materials<a class="headerlink" href="#required-tools-and-materials" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Tool 1</p></li>
-<li><p>Tool 2</p></li>
-<li><p>Spare parts or materials needed</p></li>
+<li><p>Wrench for gas tank</p></li>
 </ul>
 </section>
 <section id="personnel">
@@ -534,61 +547,59 @@ document.write(`
 </section>
 <section id="maintenance-procedure">
 <h2>Maintenance Procedure<a class="headerlink" href="#maintenance-procedure" title="Link to this heading">#</a></h2>
-<section id="step-1-preparation">
-<h3>Step 1: Preparation<a class="headerlink" href="#step-1-preparation" title="Link to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Initial setup:
-<img alt="alt text" src="../../../_images/tanklines.jpeg" /></p></li>
+<p>### Step 1: Preparation</p>
+<ul>
+<li><p>Initial setup:</p>
+<img alt="alt text" src="../../../_images/tanklines.jpeg" />
+</li>
 <li><p>Close all gas lines. All valves should be perpendicular to line.</p></li>
 <li><p>Turn on laser and wait for warmup</p></li>
 </ul>
-</section>
-<section id="step-2-flush-fluorine-line">
-<h3>Step 2: Flush Fluorine line<a class="headerlink" href="#step-2-flush-fluorine-line" title="Link to this heading">#</a></h3>
-<ul class="simple">
+<p>### Step 2: Flush Fluorine line</p>
+<ul>
 <li><p>Set the line pressure to about 60 psi.</p></li>
 <li><p>Open all valves on the fluorine line: The tank valve, pre-regulator valve, and outlet.</p></li>
 <li><p>CLOSE the red pre-regulator valve.</p></li>
-<li><p>On control panel, press <code class="docutils literal notranslate"><span class="pre">FLUSH</span></code>.
-<img alt="alt text" src="../../../_images/20240917_184937365_iOS.png" /></p></li>
-<li><p>Use the arrow to select the <code class="docutils literal notranslate"><span class="pre">BUFFER</span></code> line.
-<img alt="alt text" src="../../../_images/20240917_184941482_iOS.png" /></p></li>
-<li><p>press <code class="docutils literal notranslate"><span class="pre">ENTER</span></code>,<code class="docutils literal notranslate"><span class="pre">EXE</span></code>.
-<img alt="alt text" src="../../../_images/20240917_184948179_iOS.png" /></p></li>
-<li><p>repeat this step 3 times</p></li>
+<li><p>On control panel, press <cite>FLUSH</cite>.</p>
+<img alt="alt text" src="../../../_images/20240917_184937365_iOS.png" />
+</li>
+<li><p>Use the arrow to select the <cite>BUFFER</cite> line.</p>
+<img alt="alt text" src="../../../_images/20240917_184941482_iOS.png" />
+</li>
+<li><p>Press <cite>ENTER</cite>, <cite>EXE</cite>.</p>
+<img alt="alt text" src="../../../_images/20240917_184948179_iOS.png" />
+</li>
+<li><p>Repeat this step 3 times</p></li>
 </ul>
-</section>
-<section id="step-3-fill-laser">
-<h3>Step 3: Fill laser<a class="headerlink" href="#step-3-fill-laser" title="Link to this heading">#</a></h3>
+<p>### Step 3: Fill laser</p>
 <ul class="simple">
-<li><p>Press <code class="docutils literal notranslate"><span class="pre">NEW</span> <span class="pre">FILL</span></code>,<code class="docutils literal notranslate"><span class="pre">ENTER</span></code>,<code class="docutils literal notranslate"><span class="pre">EXE</span></code> on the control panel. The pressure will go down to 0 before filling up to about 3600 mbar.</p></li>
+<li><p>Press <cite>NEW FILL</cite>, <cite>ENTER</cite>, <cite>EXE</cite> on the control panel. The pressure will go down to 0 before filling up to about 3600 mbar.</p></li>
+<li><p>Close gas lines when fill is complete.</p></li>
 </ul>
-</section>
-<section id="step-4-test-laser">
-<h3>Step 4: Test Laser<a class="headerlink" href="#step-4-test-laser" title="Link to this heading">#</a></h3>
+<p>### Step 4: Test Laser</p>
 <ul class="simple">
-<li><p>Press <code class="docutils literal notranslate"><span class="pre">RUN</span> <span class="pre">STOP</span></code>,<code class="docutils literal notranslate"><span class="pre">ENTER</span></code>,<code class="docutils literal notranslate"><span class="pre">EXE</span></code>.</p></li>
+<li><p>Press <cite>RUN STOP</cite>, <cite>ENTER</cite>, <cite>EXE</cite>.</p></li>
+<li><p>Check that all gas lines are closed.</p></li>
 </ul>
-</section>
 </section>
 <section id="troubleshooting">
 <h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Common issues that might arise during maintenance and how to resolve them.</p></li>
-<li><p>Contact information for further support.</p></li>
+<li><p>Call Frank</p></li>
 </ul>
 </section>
 <section id="documentation-and-records">
 <h2>Documentation and Records<a class="headerlink" href="#documentation-and-records" title="Link to this heading">#</a></h2>
+<p>Update the fill date below</p>
+<p>### Filled on:</p>
 <ul class="simple">
-<li><p>Information on how to document the maintenance performed.</p></li>
-<li><p>Where and how to update maintenance records.</p></li>
+<li><p>Sept 17, 2024</p></li>
 </ul>
 </section>
 <section id="appendix">
 <h2>Appendix<a class="headerlink" href="#appendix" title="Link to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Additional information, if any, that will assist in the maintenance of the system.</p></li>
+<li><p>N/A</p></li>
 </ul>
 </section>
 </section>
@@ -624,16 +635,16 @@ document.write(`
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#overview">Overview</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#safety-precautions">Safety Precautions</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#hazards">Hazards</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#radiation-exposure">Radiation exposure</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#high-voltage">High Voltage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#toxic-and-compressed-gases">Toxic and compressed gases</a></li>
+</ul>
+</li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance-schedule">Maintenance Schedule</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#required-tools-and-materials">Required Tools and Materials</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#personnel">Personnel</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance-procedure">Maintenance Procedure</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-preparation">Step 1: Preparation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-flush-fluorine-line">Step 2: Flush Fluorine line</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-fill-laser">Step 3: Fill laser</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-4-test-laser">Step 4: Test Laser</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#maintenance-procedure">Maintenance Procedure</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#troubleshooting">Troubleshooting</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#documentation-and-records">Documentation and Records</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appendix">Appendix</a></li>
@@ -643,7 +654,7 @@ document.write(`
   <div class="sidebar-secondary-item">
 
   <div class="tocsection sourcelink">
-    <a href="../../../_sources/equipment/Laser_LPX305/Maintenance/Fill_Laser.md.txt">
+    <a href="../../../_sources/equipment/Laser_LPX305/Maintenance/Fill_Laser.rst.txt">
       <i class="fa-solid fa-file-lines"></i> Show Source
     </a>
   </div>

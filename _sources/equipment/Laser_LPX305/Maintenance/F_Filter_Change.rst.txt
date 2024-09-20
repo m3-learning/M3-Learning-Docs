@@ -137,4 +137,3 @@ Filter changed on:
 Appendix
 --------
 
-- Additional information, if any, that will assist in the maintenance of the system.
