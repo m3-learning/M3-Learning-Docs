@@ -21,7 +21,7 @@ Maintenance Schedule
 --------------------
 
 - **Frequency:** When necessary.
-- **Expected Duration:** < 15 min
+- **Expected Duration:** < 30 min
 
 Required Tools and Materials
 -----------------------------
