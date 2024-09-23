@@ -1,7 +1,7 @@
 Laser Site Prep Guide
 =====================
+:pdfembed:`src:../../../_static/LPX_305.pdf, height:1600, width:1200, align:middle`
 
-.. raw:: html
-
-   <iframe src="_static/laser/LPX_305.pdf" width="1200px" height="1800px">
-   </iframe>
+.. .. pdfembed:: _static/laser/LPX_305.pdf
+..    :height: 1800px
+..    :width: 1200px
