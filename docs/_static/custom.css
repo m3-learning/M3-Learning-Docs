@@ -169,3 +169,8 @@ html[data-theme="dark"] {
 .dark-mode .logo-dark {
   display: block;
 }
+
+.wy-nav-content, .rst-content, .document, .body {
+  max-width: 80% !important; 
+  margin: 0 auto !important;
+}

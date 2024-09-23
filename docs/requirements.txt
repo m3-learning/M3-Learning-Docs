@@ -5,3 +5,4 @@ sphinx>=3.2.1
 # sphinx_rtd_theme
 pydata-sphinx-theme
 myst-parser
+git+https://github.com/SuperKogito/sphinxcontrib-pdfembed.git
