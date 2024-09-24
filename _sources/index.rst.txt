@@ -31,11 +31,11 @@ Contents
 
    Overview <readme>
    Contributions & Help <contributing>
-   License <license>
    Authors <authors>
    Equipment Documentation <equipment>
    Software Documentation <software>
    Module Reference <api/modules>
+   License <license>
 
 
 Indices and tables
