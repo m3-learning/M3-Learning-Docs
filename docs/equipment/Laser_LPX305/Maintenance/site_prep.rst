@@ -4,4 +4,4 @@ Laser Site Prep Guide
 
 .. .. pdfembed:: _static/laser/LPX_305.pdf
 ..    :height: 1800px
-..    :width: 1200px
+..    :width: 100%
