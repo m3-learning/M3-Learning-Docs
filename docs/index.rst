@@ -34,6 +34,7 @@ Contents
    License <license>
    Authors <authors>
    Equipment Documentation <equipment>
+   Software Documentation <software>
    Module Reference <api/modules>
 
 
