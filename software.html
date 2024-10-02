@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Software Documentation &#8212; M3-Learning-Docs 0.0.post1.dev1+g5f0e41b documentation</title>
+    <title>Software Documentation &#8212; M3-Learning-Docs 0.0.post1.dev1+g0329f1a documentation</title>
   
   
   
@@ -36,7 +36,7 @@
 <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="_static/documentation_options.js?v=a9aa007e"></script>
+    <script src="_static/documentation_options.js?v=3b53132b"></script>
     <script src="_static/doctools.js?v=9a2dae69"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'software';</script>
@@ -46,7 +46,7 @@
     <link rel="prev" title="Laser Site Prep Guide" href="equipment/Laser_LPX305/Maintenance/site_prep.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="Sep 24, 2024"/>
+    <meta name="docbuild:last-update" content="Oct 02, 2024"/>
   </head>
   
   
@@ -124,8 +124,8 @@
       
     
     
-    <img src="_static/Drexel_blue_Logo_square_Light.png" class="logo__image only-light" alt="M3-Learning-Docs 0.0.post1.dev1+g5f0e41b documentation - Home"/>
-    <script>document.write(`<img src="_static/Drexel_blue_Logo_square_Dark.png" class="logo__image only-dark" alt="M3-Learning-Docs 0.0.post1.dev1+g5f0e41b documentation - Home"/>`);</script>
+    <img src="_static/Drexel_blue_Logo_square_Light.png" class="logo__image only-light" alt="M3-Learning-Docs 0.0.post1.dev1+g0329f1a documentation - Home"/>
+    <script>document.write(`<img src="_static/Drexel_blue_Logo_square_Dark.png" class="logo__image only-dark" alt="M3-Learning-Docs 0.0.post1.dev1+g0329f1a documentation - Home"/>`);</script>
   
   
 </a></div>
@@ -466,6 +466,7 @@ document.write(`
   <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Equipment</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="software/scaffold.html">Setting up Packages with Pyscaffold</a></li>
+<li class="toctree-l1"><a class="reference internal" href="software/datafed_repository_setup.html">DataFed Repository Setup Guide</a></li>
 </ul>
 </div>
 </nav></div>
@@ -536,6 +537,27 @@ document.write(`
 <li class="toctree-l2"><a class="reference internal" href="software/scaffold.html#copy-contents-of-the-config-py-file">Copy contents of the Config.py file</a></li>
 <li class="toctree-l2"><a class="reference internal" href="software/scaffold.html#check-all-package-specific-changes">Check all package specific changes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="software/scaffold.html#first-build">First Build</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="software/datafed_repository_setup.html">DataFed Repository Setup Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#login-to-the-server">1. Login to the Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#create-a-new-user">2. Create a New User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#add-user-to-the-sudo-group">3. Add User to the <cite>sudo</cite> Group</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#switch-to-the-new-user">4. Switch to the New User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#update-the-system">5. Update the System</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#reboot-the-server">6. Reboot the Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#install-globus-connect-server">7. Install Globus Connect Server</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#install-docker">8. Install Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#reboot-and-test-docker">9. Reboot and Test Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#clone-the-datafed-repository">10. Clone the DataFed Repository</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#fix-dockerfile-permissions-issue">11. Fix Dockerfile Permissions Issue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#navigate-to-the-working-directory">12. Navigate to the Working Directory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#set-up-python-virtual-environment">13. Set Up Python Virtual Environment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#generate-and-edit-the-env-file">14. Generate and Edit the <cite>.env</cite> File</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#generate-globus-files">15. Generate Globus Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#build-docker-images">16. Build Docker Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#ensure-apache-is-not-running">17. Ensure Apache is Not Running</a></li>
+<li class="toctree-l2"><a class="reference internal" href="software/datafed_repository_setup.html#start-docker-compose">18. Start Docker Compose</a></li>
 </ul>
 </li>
 </ul>
