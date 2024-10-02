@@ -75,7 +75,6 @@ extensions = [
     'myst_parser',
     'sphinxcontrib.pdfembed',
     'sphinx_git',
-    'sphinxcontrib.versioning',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -203,7 +202,7 @@ html_theme_options = {
         "image_light": "_static/Drexel_blue_Logo_square_Light.png",
         "image_dark": "_static/Drexel_blue_Logo_square_Dark.png",
     },
-    "secondary_sidebar_items": ["page-toc", "edit-this-pag,e", "last-updated"]
+    "secondary_sidebar_items": ["page-toc", "edit-this-page", "last-updated"]
 }
 
 # Add any paths that contain custom themes here, relative to this directory.
