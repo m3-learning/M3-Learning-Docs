@@ -73,7 +73,9 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.napoleon",
     'myst_parser',
-    'sphinxcontrib.pdfembed' 
+    'sphinxcontrib.pdfembed',
+    'sphinx_git',
+    'sphinxcontrib.versioning',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
