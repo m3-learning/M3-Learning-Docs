@@ -20,6 +20,8 @@ build:
   os: ubuntu-22.04
   tools:
     python: "3.11"
+  clone:
+    depth: full  # Ensure full Git history is cloned
 
 python:
   install:
