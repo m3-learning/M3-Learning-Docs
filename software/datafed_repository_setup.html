@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>DataFed Repository Setup Guide &#8212; M3-Learning-Docs 0.0.post1.dev1+ge5a02e9 documentation</title>
+    <title>DataFed Repository Setup Guide &#8212; M3-Learning-Docs 0.0.post1.dev1+g9ba1d76 documentation</title>
   
   
   
@@ -29,6 +29,7 @@
 <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=fa44fd50" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css?v=56b68b65" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
@@ -36,9 +37,11 @@
 <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
   <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script src="../_static/documentation_options.js?v=d7ded4a0"></script>
+    <script src="../_static/documentation_options.js?v=fbe3e787"></script>
     <script src="../_static/doctools.js?v=9a2dae69"></script>
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'software/datafed_repository_setup';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -124,8 +127,8 @@
       
     
     
-    <img src="../_static/Drexel_blue_Logo_square_Light.png" class="logo__image only-light" alt="M3-Learning-Docs 0.0.post1.dev1+ge5a02e9 documentation - Home"/>
-    <script>document.write(`<img src="../_static/Drexel_blue_Logo_square_Dark.png" class="logo__image only-dark" alt="M3-Learning-Docs 0.0.post1.dev1+ge5a02e9 documentation - Home"/>`);</script>
+    <img src="../_static/Drexel_blue_Logo_square_Light.png" class="logo__image only-light" alt="M3-Learning-Docs 0.0.post1.dev1+g9ba1d76 documentation - Home"/>
+    <script>document.write(`<img src="../_static/Drexel_blue_Logo_square_Dark.png" class="logo__image only-dark" alt="M3-Learning-Docs 0.0.post1.dev1+g9ba1d76 documentation - Home"/>`);</script>
   
   
 </a></div>
@@ -532,9 +535,9 @@ document.write(`
 <ul>
 <li><p>Start the server.</p></li>
 <li><p>SSH into the server:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">ssh</span> <span class="pre">root&#64;&lt;server-ip&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>root@&lt;server-ip&gt;
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -542,9 +545,9 @@ document.write(`
 <h2>2. Create a New User<a class="headerlink" href="#create-a-new-user" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Add a new user:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">adduser</span> <span class="pre">&lt;username&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>adduser<span class="w"> </span>&lt;username&gt;
+</pre></div>
+</div>
 <ul class="simple">
 <li><p>Set the password when prompted.</p></li>
 </ul>
@@ -555,9 +558,9 @@ document.write(`
 <h2>3. Add User to the <cite>sudo</cite> Group<a class="headerlink" href="#add-user-to-the-sudo-group" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Grant the user sudo privileges:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">usermod</span> <span class="pre">-aG</span> <span class="pre">sudo</span> <span class="pre">&lt;username&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>&lt;username&gt;
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -565,9 +568,9 @@ document.write(`
 <h2>4. Switch to the New User<a class="headerlink" href="#switch-to-the-new-user" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Switch to the newly created user:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">su</span> <span class="pre">-</span> <span class="pre">&lt;username&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>su<span class="w"> </span>-<span class="w"> </span>&lt;username&gt;
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -575,11 +578,11 @@ document.write(`
 <h2>5. Update the System<a class="headerlink" href="#update-the-system" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Update package information and upgrade the system:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">python3-venv</span>&#160; <span class="pre">#</span> <span class="pre">Required</span> <span class="pre">for</span> <span class="pre">later</span> <span class="pre">steps</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>python3-venv<span class="w">  </span><span class="c1"># Required for later steps</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -587,14 +590,14 @@ document.write(`
 <h2>6. Reboot the Server<a class="headerlink" href="#reboot-the-server" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Reboot the server and re-enter:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sudo</span> <span class="pre">reboot</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
+</pre></div>
+</div>
 <p>After reboot, SSH in again and switch to the user:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">ssh</span> <span class="pre">root&#64;&lt;server-ip&gt;</span>
-<span class="pre">su</span> <span class="pre">-</span> <span class="pre">&lt;username&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>root@&lt;server-ip&gt;
+su<span class="w"> </span>-<span class="w"> </span>&lt;username&gt;
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -602,13 +605,13 @@ document.write(`
 <h2>7. Install Globus Connect Server<a class="headerlink" href="#install-globus-connect-server" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Download and install the Globus Connect Server:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">curl</span> <span class="pre">-LOs</span> <span class="pre">https://downloads.globus.org/globus-connect-server/stable/installers/repo/deb/globus-repo_latest_all.deb</span>
-<span class="pre">sudo</span> <span class="pre">dpkg</span> <span class="pre">-i</span> <span class="pre">globus-repo_latest_all.deb</span>
-<span class="pre">sudo</span> <span class="pre">apt-key</span> <span class="pre">add</span> <span class="pre">/usr/share/globus-repo/RPM-GPG-KEY-Globus</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">globus-connect-server54</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>curl<span class="w"> </span>-LOs<span class="w"> </span>https://downloads.globus.org/globus-connect-server/stable/installers/repo/deb/globus-repo_latest_all.deb
+sudo<span class="w"> </span>dpkg<span class="w"> </span>-i<span class="w"> </span>globus-repo_latest_all.deb
+sudo<span class="w"> </span>apt-key<span class="w"> </span>add<span class="w"> </span>/usr/share/globus-repo/RPM-GPG-KEY-Globus
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>globus-connect-server54
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -616,31 +619,31 @@ document.write(`
 <h2>8. Install Docker<a class="headerlink" href="#install-docker" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Install Docker prerequisites:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">ca-certificates</span> <span class="pre">curl</span>
-<span class="pre">sudo</span> <span class="pre">install</span> <span class="pre">-m</span> <span class="pre">0755</span> <span class="pre">-d</span> <span class="pre">/etc/apt/keyrings</span>
-<span class="pre">sudo</span> <span class="pre">curl</span> <span class="pre">-fsSL</span> <span class="pre">https://download.docker.com/linux/ubuntu/gpg</span> <span class="pre">-o</span> <span class="pre">/etc/apt/keyrings/docker.asc</span>
-<span class="pre">sudo</span> <span class="pre">chmod</span> <span class="pre">a+r</span> <span class="pre">/etc/apt/keyrings/docker.asc</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>ca-certificates<span class="w"> </span>curl
+sudo<span class="w"> </span>install<span class="w"> </span>-m<span class="w"> </span><span class="m">0755</span><span class="w"> </span>-d<span class="w"> </span>/etc/apt/keyrings
+sudo<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.docker.com/linux/ubuntu/gpg<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/docker.asc
+sudo<span class="w"> </span>chmod<span class="w"> </span>a+r<span class="w"> </span>/etc/apt/keyrings/docker.asc
+</pre></div>
+</div>
 </li>
 <li><p>Set up the Docker repository:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">echo</span> <span class="pre">\</span>
-<span class="pre">&quot;deb</span> <span class="pre">[arch=$(dpkg</span> <span class="pre">--print-architecture)</span> <span class="pre">signed-by=/etc/apt/keyrings/docker.asc]</span> <span class="pre">https://download.docker.com/linux/ubuntu</span> <span class="pre">\</span>
-<span class="pre">$(.</span> <span class="pre">/etc/os-release</span> <span class="pre">&amp;&amp;</span> <span class="pre">echo</span> <span class="pre">&quot;$VERSION_CODENAME&quot;)</span> <span class="pre">stable&quot;</span> <span class="pre">|</span> <span class="pre">\</span>
-<span class="pre">sudo</span> <span class="pre">tee</span> <span class="pre">/etc/apt/sources.list.d/docker.list</span> <span class="pre">&gt;</span> <span class="pre">/dev/null</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">echo</span><span class="w"> </span><span class="se">\</span>
+<span class="s2">&quot;deb [arch=</span><span class="k">$(</span>dpkg<span class="w"> </span>--print-architecture<span class="k">)</span><span class="s2"> signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \</span>
+<span class="k">$(</span>.<span class="w"> </span>/etc/os-release<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;</span><span class="nv">$VERSION_CODENAME</span><span class="s2">&quot;</span><span class="k">)</span><span class="s2"> stable&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span><span class="se">\</span>
+sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/docker.list<span class="w"> </span>&gt;<span class="w"> </span>/dev/null
+</pre></div>
+</div>
 </li>
 <li><p>Install Docker:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">docker-ce</span> <span class="pre">docker-ce-cli</span> <span class="pre">containerd.io</span> <span class="pre">docker-buildx-plugin</span> <span class="pre">docker-compose-plugin</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>docker-ce<span class="w"> </span>docker-ce-cli<span class="w"> </span>containerd.io<span class="w"> </span>docker-buildx-plugin<span class="w"> </span>docker-compose-plugin
+</pre></div>
+</div>
 </li>
 <li><p>Add the user to the <cite>docker</cite> group:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sudo</span> <span class="pre">usermod</span> <span class="pre">-aG</span> <span class="pre">docker</span> <span class="pre">&lt;username&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>docker<span class="w"> </span>&lt;username&gt;
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -648,18 +651,18 @@ document.write(`
 <h2>9. Reboot and Test Docker<a class="headerlink" href="#reboot-and-test-docker" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Reboot the server and re-enter:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sudo</span> <span class="pre">reboot</span>
-<span class="pre">ssh</span> <span class="pre">root&#64;&lt;server-ip&gt;</span>
-<span class="pre">su</span> <span class="pre">-</span> <span class="pre">&lt;username&gt;</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>reboot
+ssh<span class="w"> </span>root@&lt;server-ip&gt;
+su<span class="w"> </span>-<span class="w"> </span>&lt;username&gt;
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>upgrade
+</pre></div>
+</div>
 </li>
 <li><p>Test Docker:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">docker</span> <span class="pre">run</span> <span class="pre">hello-world</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -667,12 +670,12 @@ document.write(`
 <h2>10. Clone the DataFed Repository<a class="headerlink" href="#clone-the-datafed-repository" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Clone the DataFed repository:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/ORNL/DataFed.git</span>
-<span class="pre">cd</span> <span class="pre">DataFed</span>
-<span class="pre">git</span> <span class="pre">checkout</span> <span class="pre">release_June_2024</span>
-<span class="pre">git</span> <span class="pre">submodule</span> <span class="pre">update</span> <span class="pre">--init</span> <span class="pre">--recursive</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/ORNL/DataFed.git
+<span class="nb">cd</span><span class="w"> </span>DataFed
+git<span class="w"> </span>checkout<span class="w"> </span>release_June_2024
+git<span class="w"> </span>submodule<span class="w"> </span>update<span class="w"> </span>--init<span class="w"> </span>--recursive
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -680,9 +683,9 @@ document.write(`
 <h2>11. Fix Dockerfile Permissions Issue<a class="headerlink" href="#fix-dockerfile-permissions-issue" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Fix permissions in the Dockerfile:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sed</span> <span class="pre">-i</span> <span class="pre">'/WORKDIR/a</span> <span class="pre">RUN</span> <span class="pre">chmod</span> <span class="pre">o+w</span> <span class="pre">${DATAFED_INSTALL_PATH}/authz'</span> <span class="pre">repository/docker/Dockerfile.gcs</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s1">&#39;/WORKDIR/a RUN chmod o+w ${DATAFED_INSTALL_PATH}/authz&#39;</span><span class="w"> </span>repository/docker/Dockerfile.gcs
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -690,9 +693,9 @@ document.write(`
 <h2>12. Navigate to the Working Directory<a class="headerlink" href="#navigate-to-the-working-directory" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Navigate to the <cite>compose/repo</cite> directory:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">cd</span> <span class="pre">compose/repo</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>compose/repo
+</pre></div>
+</div>
 <p>All subsequent steps assume you remain in <code class="docutils literal notranslate"><span class="pre">DataFed/compose/repo</span></code>.</p>
 </li>
 </ul>
@@ -701,11 +704,11 @@ document.write(`
 <h2>13. Set Up Python Virtual Environment<a class="headerlink" href="#set-up-python-virtual-environment" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Set up a Python virtual environment:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">python3</span> <span class="pre">-m</span> <span class="pre">venv</span> <span class="pre">.venv</span>
-<span class="pre">source</span> <span class="pre">.venv/bin/activate</span>
-<span class="pre">pip</span> <span class="pre">install</span> <span class="pre">globus-sdk</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>-m<span class="w"> </span>venv<span class="w"> </span>.venv
+<span class="nb">source</span><span class="w"> </span>.venv/bin/activate
+pip<span class="w"> </span>install<span class="w"> </span>globus-sdk
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -713,17 +716,17 @@ document.write(`
 <h2>14. Generate and Edit the <cite>.env</cite> File<a class="headerlink" href="#generate-and-edit-the-env-file" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Generate the <cite>.env</cite> file:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">./generate_env.sh</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./generate_env.sh
+</pre></div>
+</div>
 </li>
 <li><p>Edit the <cite>.env</cite> file with the appropriate values:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">DATAFED_GLOBUS_SUBSCRIPTION=&lt;id&gt;</span>
-<span class="pre">DATAFED_DOMAIN=datafed.ornl.gov</span>
-<span class="pre">DATAFED_GCS_IP=&lt;server-ip&gt;</span>
-<span class="pre">DATAFED_REPO_DOMAIN=&lt;server-ip&gt;</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nv">DATAFED_GLOBUS_SUBSCRIPTION</span><span class="o">=</span>&lt;id&gt;
+<span class="nv">DATAFED_DOMAIN</span><span class="o">=</span>datafed.ornl.gov
+<span class="nv">DATAFED_GCS_IP</span><span class="o">=</span>&lt;server-ip&gt;
+<span class="nv">DATAFED_REPO_DOMAIN</span><span class="o">=</span>&lt;server-ip&gt;
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -731,9 +734,9 @@ document.write(`
 <h2>15. Generate Globus Files<a class="headerlink" href="#generate-globus-files" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Generate Globus configuration files:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">./generate_globus_files.sh</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./generate_globus_files.sh
+</pre></div>
+</div>
 <p>Follow the provided link, retrieve the authorization code, and paste it when prompted.</p>
 </li>
 </ul>
@@ -742,9 +745,9 @@ document.write(`
 <h2>16. Build Docker Images<a class="headerlink" href="#build-docker-images" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Build the repository Docker images:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">./build_repo_images_for_compose.sh</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>./build_repo_images_for_compose.sh
+</pre></div>
+</div>
 <p>This process may take at least 15 minutes.</p>
 </li>
 </ul>
@@ -753,20 +756,20 @@ document.write(`
 <h2>17. Ensure Apache is Not Running<a class="headerlink" href="#ensure-apache-is-not-running" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Check if Apache is running:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">install</span> <span class="pre">net-tools</span>
-<span class="pre">sudo</span> <span class="pre">netstat</span> <span class="pre">-tlupn</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">':80'</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>net-tools
+sudo<span class="w"> </span>netstat<span class="w"> </span>-tlupn<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;:80&#39;</span>
+</pre></div>
+</div>
 </li>
 <li><p>If Apache is running, stop the service:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">stop</span> <span class="pre">apache2</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>stop<span class="w"> </span>apache2
+</pre></div>
+</div>
 <p>Double-check the status to ensure it is stopped:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">sudo</span> <span class="pre">netstat</span> <span class="pre">-tlupn</span> <span class="pre">|</span> <span class="pre">grep</span> <span class="pre">':80'</span>
-<span class="pre">sudo</span> <span class="pre">systemctl</span> <span class="pre">status</span> <span class="pre">apache2</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>netstat<span class="w"> </span>-tlupn<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span><span class="s1">&#39;:80&#39;</span>
+sudo<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>apache2
+</pre></div>
+</div>
 </li>
 </ul>
 </section>
@@ -774,14 +777,14 @@ document.write(`
 <h2>18. Start Docker Compose<a class="headerlink" href="#start-docker-compose" title="Link to this heading">#</a></h2>
 <ul>
 <li><p>Unset environment variables (optional, but may be necessary):</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">source</span> <span class="pre">./unset_env.sh</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">source</span><span class="w"> </span>./unset_env.sh
+</pre></div>
+</div>
 </li>
 <li><p>Start the Docker Compose setup:</p>
-<p><code class="docutils literal notranslate"><span class="pre">`bash</span>
-<span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">-f</span> <span class="pre">./compose.yml</span> <span class="pre">up</span>
-<span class="pre">`</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>-f<span class="w"> </span>./compose.yml<span class="w"> </span>up
+</pre></div>
+</div>
 <p>With the permission issue fixed, it should now work as expected.</p>
 </li>
 </ul>
