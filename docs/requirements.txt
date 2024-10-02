@@ -7,3 +7,4 @@ pydata-sphinx-theme
 myst-parser
 git+https://github.com/SuperKogito/sphinxcontrib-pdfembed.git
 sphinx-git
+sphinx-copybutton
