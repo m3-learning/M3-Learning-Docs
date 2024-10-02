@@ -1,5 +1,5 @@
 DataFed Repository Setup Guide
-=====================
+==============================
 
 
 *Last updated by Theo Beers, 2024-08-26, 20:00 EDT*
@@ -220,7 +220,7 @@ DataFed Repository Setup Guide
   This process may take at least 15 minutes.
 
 17. Ensure Apache is Not Running
--------------------------------
+--------------------------------
 
 - Check if Apache is running:
 
