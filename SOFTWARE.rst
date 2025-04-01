@@ -6,5 +6,6 @@ Software Documentation
    :caption: Software
 
    software/scaffold
-   software/datafed_repository_setup
    software/ipmi_config
+   software/datafed_repository_setup
+   
