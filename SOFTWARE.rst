@@ -3,8 +3,8 @@ Software Documentation
 
 .. toctree::
    :maxdepth: 2
-   :caption: Equipment
+   :caption: Software
 
    software/scaffold
    software/datafed_repository_setup
-   software/IPMI_config
+   software/ipmi_config
