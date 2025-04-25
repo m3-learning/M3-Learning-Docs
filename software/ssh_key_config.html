@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>m3_learning_docs package &#8212; M3-Learning-Docs 0.0.post1.dev1+ge165226 documentation</title>
+    <title>Setup SSH Key Authentication from Windows and macOS to Ubuntu Server &#8212; M3-Learning-Docs 0.0.post1.dev1+ge165226 documentation</title>
   
   
   
@@ -45,11 +45,11 @@
     <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="../_static/copybutton.js?v=f281be69"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'api/m3_learning_docs';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'software/ssh_key_config';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="License" href="../license.html" />
-    <link rel="prev" title="m3_learning_docs" href="modules.html" />
+    <link rel="next" title="m3_learning_docs" href="../api/modules.html" />
+    <link rel="prev" title="DataFed Repository Setup Guide" href="datafed_repository_setup.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   <meta name="docsearch:version" content="0.0.post1.dev1+ge165226" />
@@ -163,7 +163,7 @@
 </li>
 
 
-<li class="nav-item ">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../software.html">
     Software Documentation
   </a>
@@ -177,8 +177,8 @@
                 </button>
                 <ul id="pst-nav-more-links" class="dropdown-menu">
                     
-<li class=" current active">
-  <a class="nav-link dropdown-item nav-internal" href="modules.html">
+<li class=" ">
+  <a class="nav-link dropdown-item nav-internal" href="../api/modules.html">
     Module Reference
   </a>
 </li>
@@ -346,15 +346,15 @@
 </li>
 
 
-<li class="nav-item ">
+<li class="nav-item current active">
   <a class="nav-link nav-internal" href="../software.html">
     Software Documentation
   </a>
 </li>
 
 
-<li class="nav-item current active">
-  <a class="nav-link nav-internal" href="modules.html">
+<li class="nav-item ">
+  <a class="nav-link nav-internal" href="../api/modules.html">
     Module Reference
   </a>
 </li>
@@ -445,8 +445,12 @@
 <nav class="bd-docs-nav bd-links"
      aria-label="Section Navigation">
   <p class="bd-links__title" role="heading" aria-level="1">Section Navigation</p>
-  <div class="bd-toc-item navbar-nav"><ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">m3_learning_docs package</a></li>
+  <div class="bd-toc-item navbar-nav"><p aria-level="2" class="caption" role="heading"><span class="caption-text">Software</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="scaffold.html">Setting up Packages with Pyscaffold</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ipmi_config.html">Guide to Setup IPMI Credentials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="datafed_repository_setup.html">DataFed Repository Setup Guide</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Setup SSH Key Authentication from Windows and macOS to Ubuntu Server</a></li>
 </ul>
 </div>
 </nav></div>
@@ -488,9 +492,9 @@
       </a>
     </li>
     
-    <li class="breadcrumb-item"><a href="modules.html" class="nav-link">m3_learning_docs</a></li>
+    <li class="breadcrumb-item"><a href="../software.html" class="nav-link">Software Documentation</a></li>
     
-    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">m3_learning_docs package</span></li>
+    <li class="breadcrumb-item active" aria-current="page"><span class="ellipsis">Setup SSH Key Authentication from Windows and macOS to Ubuntu Server</span></li>
   </ul>
 </nav>
 </div>
@@ -507,10 +511,96 @@
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section id="m3-learning-docs-package">
-<h1>m3_learning_docs package<a class="headerlink" href="#m3-learning-docs-package" title="Link to this heading">#</a></h1>
-<section id="module-m3_learning_docs">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-m3_learning_docs" title="Link to this heading">#</a></h2>
+  <section id="setup-ssh-key-authentication-from-windows-and-macos-to-ubuntu-server">
+<h1>Setup SSH Key Authentication from Windows and macOS to Ubuntu Server<a class="headerlink" href="#setup-ssh-key-authentication-from-windows-and-macos-to-ubuntu-server" title="Link to this heading">#</a></h1>
+<p>This guide will help you set up SSH key authentication from a Windows or macOS machine to an Ubuntu server, allowing you to connect without a password.</p>
+<section id="step-1-generate-an-ssh-key-on-windows-or-macos">
+<h2>Step 1: Generate an SSH Key on Windows or macOS<a class="headerlink" href="#step-1-generate-an-ssh-key-on-windows-or-macos" title="Link to this heading">#</a></h2>
+<ol class="arabic">
+<li><p>Open <strong>PowerShell</strong> (Windows) or <strong>Terminal</strong> (macOS).</p></li>
+<li><p>Generate an SSH key pair if you don’t already have one:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ssh-keygen<span class="w"> </span>-t<span class="w"> </span>rsa<span class="w"> </span>-b<span class="w"> </span><span class="m">4096</span><span class="w"> </span>-C<span class="w"> </span><span class="s2">&quot;your_email@example.com&quot;</span>
+</pre></div>
+</div>
+</li>
+<li><p>Press <strong>Enter</strong> to save the key in the default location:</p>
+<ul class="simple">
+<li><p>Windows: <code class="docutils literal notranslate"><span class="pre">C:\Users\YourUsername\.ssh\id_rsa</span></code></p></li>
+<li><p>macOS: <code class="docutils literal notranslate"><span class="pre">~/.ssh/id_rsa</span></code></p></li>
+</ul>
+</li>
+<li><p>If prompted for a passphrase, press <strong>Enter</strong> (or set one for added security).</p></li>
+</ol>
+</section>
+<section id="step-2-copy-the-ssh-key-to-your-ubuntu-server">
+<h2>Step 2: Copy the SSH Key to Your Ubuntu Server<a class="headerlink" href="#step-2-copy-the-ssh-key-to-your-ubuntu-server" title="Link to this heading">#</a></h2>
+<section id="option-1-use-ssh-copy-id-recommended">
+<h3>Option 1: Use <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span></code> (Recommended)<a class="headerlink" href="#option-1-use-ssh-copy-id-recommended" title="Link to this heading">#</a></h3>
+<p>If <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span></code> is installed, run:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ssh-copy-id<span class="w"> </span>-i<span class="w"> </span>~/.ssh/id_rsa.pub<span class="w"> </span>user@your_ubuntu_server
+</pre></div>
+</div>
+</section>
+<section id="option-2-manually-copy-the-key">
+<h3>Option 2: Manually Copy the Key<a class="headerlink" href="#option-2-manually-copy-the-key" title="Link to this heading">#</a></h3>
+<p>If <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span></code> isn’t available, do the following:</p>
+<ol class="arabic">
+<li><p><strong>Display the SSH Public Key</strong>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>cat<span class="w"> </span>~/.ssh/id_rsa.pub
+</pre></div>
+</div>
+<p>Copy the output.</p>
+</li>
+<li><p><strong>Log in to the Ubuntu Server</strong>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>user@your_ubuntu_server
+</pre></div>
+</div>
+</li>
+<li><p><strong>Add the Key to <code class="docutils literal notranslate"><span class="pre">authorized_keys</span></code></strong>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>-p<span class="w"> </span>~/.ssh
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;your_copied_public_key&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>~/.ssh/authorized_keys
+chmod<span class="w"> </span><span class="m">600</span><span class="w"> </span>~/.ssh/authorized_keys
+chmod<span class="w"> </span><span class="m">700</span><span class="w"> </span>~/.ssh
+</pre></div>
+</div>
+</li>
+<li><p><strong>Restart SSH Service (If Needed)</strong>:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>ssh
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+</section>
+<section id="step-3-test-ssh-login-without-password">
+<h2>Step 3: Test SSH Login Without Password<a class="headerlink" href="#step-3-test-ssh-login-without-password" title="Link to this heading">#</a></h2>
+<p>On your Windows or macOS machine, try logging in:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>user@your_ubuntu_server
+</pre></div>
+</div>
+<p>If everything is set up correctly, you should be logged in without a password.</p>
+</section>
+<section id="optional-step-4-configure-ssh-for-easier-access">
+<h2>(Optional) Step 4: Configure SSH for Easier Access<a class="headerlink" href="#optional-step-4-configure-ssh-for-easier-access" title="Link to this heading">#</a></h2>
+<p>Edit the SSH config file:</p>
+<ul class="simple">
+<li><p><strong>Windows</strong>: <code class="docutils literal notranslate"><span class="pre">C:\Users\YourUsername\.ssh\config</span></code></p></li>
+<li><p><strong>macOS</strong>: <code class="docutils literal notranslate"><span class="pre">~/.ssh/config</span></code></p></li>
+</ul>
+<p>Add the following:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>Host<span class="w"> </span>ubuntu-server
+<span class="w">    </span>HostName<span class="w"> </span>your_ubuntu_server
+<span class="w">    </span>User<span class="w"> </span>your_username
+<span class="w">    </span>IdentityFile<span class="w"> </span>~/.ssh/id_rsa
+</pre></div>
+</div>
+<p>Now, you can connect using:</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>ssh<span class="w"> </span>ubuntu-server
+</pre></div>
+</div>
+<p>instead of <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">user&#64;your_ubuntu_server</span></code>.</p>
+<hr class="docutils" />
+<p>This guide ensures a secure and efficient way to connect to your Ubuntu server without a password. Let me know if you need any assistance! 🚀</p>
 </section>
 </section>
 
@@ -525,20 +615,20 @@
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="modules.html"
+       href="datafed_repository_setup.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">m3_learning_docs</p>
+        <p class="prev-next-title">DataFed Repository Setup Guide</p>
       </div>
     </a>
     <a class="right-next"
-       href="../license.html"
+       href="../api/modules.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">License</p>
+        <p class="prev-next-title">m3_learning_docs</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -561,7 +651,14 @@
   </div>
   <nav class="bd-toc-nav page-toc" aria-labelledby="pst-page-navigation-heading-2">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-m3_learning_docs">Module contents</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-generate-an-ssh-key-on-windows-or-macos">Step 1: Generate an SSH Key on Windows or macOS</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-copy-the-ssh-key-to-your-ubuntu-server">Step 2: Copy the SSH Key to Your Ubuntu Server</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-1-use-ssh-copy-id-recommended">Option 1: Use <code class="docutils literal notranslate"><span class="pre">ssh-copy-id</span></code> (Recommended)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#option-2-manually-copy-the-key">Option 2: Manually Copy the Key</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-test-ssh-login-without-password">Step 3: Test SSH Login Without Password</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-step-4-configure-ssh-for-easier-access">(Optional) Step 4: Configure SSH for Easier Access</a></li>
 </ul>
   </nav></div>
 
