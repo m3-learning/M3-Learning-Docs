@@ -71,7 +71,8 @@ Maintenance Procedure
 
 ### Step 3: Fill laser
 
-- Press `NEW FILL`, `ENTER`, `EXE` on the control panel. The pressure will go down to 0 before filling up to about 3600 mbar.
+- Press `NEW FILL`, `ENTER`, `EXE` on the control panel. The pressure will go down to about 0.
+- When the pressure stabilizes, open the red pre-regulator valve. The pressure will increase up to about 3600 mbar.
 - Close gas lines when fill is complete.
 
 ### Step 4: Test Laser
@@ -92,6 +93,7 @@ Update the fill date below
 ### Filled on:
 
 - Sept 17, 2024
+- Apr 30, 2025
 
 Appendix
 --------
