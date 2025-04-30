@@ -49,8 +49,8 @@ Maintenance Procedure
 
 ### Step 2: Flush Fluorine line 
 
-- Set the line pressure to about 60 psi.
 - Open all valves on the fluorine line: The tank valve, pre-regulator valve, and outlet.
+- Set the line pressure to about 60 psi.
 - CLOSE the red pre-regulator valve.
 - On control panel, press `FLUSH`.
 
